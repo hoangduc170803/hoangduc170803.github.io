@@ -47,10 +47,8 @@ Welcome to drop me an email if you want to discuss or collaborate.
      block ride up beside the photo and sit in the narrow column left over. */
   .selected-projects-wrap { clear: both; padding-top: 2rem; }
 
-  /* Heading: large, with "[full list]" nearly the same size, as in the
-     theme's own "selected publications" block. */
+  /* Heading sized like the theme's own "selected publications" block. */
   .selected-projects-wrap h2 { font-size: 2rem; font-weight: 400; margin-bottom: 1.6rem; }
-  .selected-projects-wrap h2 .full-list { font-size: 1.7rem; font-weight: 400; color: var(--global-theme-color); }
 
   .selected-projects .proj { margin-bottom: 2rem; }
 
@@ -75,9 +73,7 @@ Welcome to drop me an email if you want to discuss or collaborate.
 
 <div class="selected-projects-wrap">
 
-<h2><a href="{{ '/projects/' | relative_url }}" style="color: inherit;">selected projects</a>
-  <a href="{{ '/projects/' | relative_url }}" class="full-list">[full list]</a>
-</h2>
+<h2>selected projects</h2>
 
 <div class="selected-projects">
   {% assign ordered = site.projects | sort: "importance" %}
