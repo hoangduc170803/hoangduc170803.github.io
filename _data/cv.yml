@@ -5,10 +5,8 @@ cv:
   location: Hanoi, Vietnam
   image: ""
   summary: >-
-    Data engineer at Viettel Telecom, where I rebuilt the pipelines behind a company-wide fee settlement
-    system. At Aubot, I took a multi-agent path finding planner from recent literature into production on a
-    live AGV fleet. I want to keep working at that intersection: the data infrastructure that makes large
-    models work, from the pipelines that train them to the systems that serve them.
+    Data engineer at Viettel Telecom. I work on the data infrastructure that makes large models work, from
+    the pipelines that train them to the systems that serve them. Full record in the PDF above.
 
   social_networks:
     - network: GitHub
@@ -26,7 +24,6 @@ cv:
         start_date: 2022
         end_date: 2026-08
         score: GPA 8.08/10
-        courses: "Statistics and Probability; Discrete Mathematics; Data Structures and Algorithms; Introduction to Databases; Operating Systems; Computer Organization and Architecture; Computer Networking; Internet of Things"
         highlights:
           - "Graduation capstone project: SWES - Smart Warehouse Execution System (Multi-AGV Orchestration), graded 9.0/10 (A+)."
 
@@ -37,10 +34,8 @@ cv:
         start_date: 2025-07
         end_date: present
         highlights:
-          - Sales Fee System v3 could only settle fees monthly: data left the Data Lake as TXT files and was enriched and aggregated inside Oracle.
-          - Rebuilt the pipeline on the Data Lakehouse, with Apache Spark handling aggregation, enrichment and fee calculation across terabytes of data. Pipeline runtime fell from over 30 minutes to under 8 minutes, and settlement moved from monthly to daily.
-          - Migrated 17 tables from v3 with Apache Hop and consolidated external sources through Apache NiFi, with data integrity preserved across the cutover.
-          - Deployed a phone number masking system in partnership with China-ASEAN Information Harbor Co., Ltd., configuring the KrakenD API Gateway and streaming logs into the ELK stack through Fluentd.
+          - Rebuilt the Sales Fee System pipeline on the Data Lakehouse with Apache Spark, cutting pipeline runtime from over 30 minutes to under 8 minutes and moving fee settlement from monthly to daily.
+          - Migrated 17 tables from the legacy system with Apache Hop and consolidated external sources through Apache NiFi.
 
       - company: Viettel Group
         location: Hanoi, Vietnam
@@ -48,58 +43,5 @@ cv:
         start_date: 2025-04
         end_date: 2025-06
         highlights:
-          - Built ETL workflows following the Medallion architecture (Bronze/Silver/Gold) on Databricks, using Spark SQL to transform data across each layer.
-          - Applied fine-grained access control with Apache Ranger, Databricks Unity Catalog and lakeFS.
-          - Developed a hybrid RAG system that answers staff questions on which company-issued policy applies, returning the governing policy document with traceable citations.
-
-    Projects:
-      - name: SWES - Smart Warehouse Execution System (Multi-AGV Orchestration)
-        date: 2026-06 to 2026-08
-        highlights:
-          - Research and Development, Multi-Agent Path Finding at Aubot (CF Group). Graduation capstone project.
-          - openTCS ships with a Dijkstra router that plans each vehicle independently, which left the AGVs deadlocking against one another in regular operation.
-          - Built a joint multi-agent planner in the openTCS Java kernel, evolving from PIBT to LaCAM and LaCAM*, extended to continuous order arrival with LLLG local guidance (SoCS-26) and an Action Dependency Graph against corridor deadlock.
-          - Ported these undirected-graph algorithms onto a directed industrial roadmap with vehicle footprints and headings, and replaced greedy assignment with global min-cost matching (Hungarian algorithm) on road-graph distances.
-          - Deployed on Aubot's live AGV fleet.
-
-      - name: Hybrid RAG System
-        date: 2025-04 to 2025-06
-        highlights:
-          - Built at the Viettel Digital Talent Program with Python, FastAPI, Streamlit, Milvus, MinIO, Docker, BGE-M3 and Gemma 3.
-          - Answers staff questions on which company-issued policy applies, returning the governing policy document with traceable citations.
-          - Indexed documents with BGE-M3 embeddings (1024-dim) in Milvus and combined dense vector search with BM25 sparse search, improving recall and ranking quality.
-          - Integrated Gemma 3 models as the generative backbone and benchmarked performance across model sizes.
-
-      - name: NYC Taxi Data Pipeline
-        date: ""
-        highlights:
-          - Built an automated pipeline for NYC taxi trip data on Google Cloud, provisioning all resources with Terraform for reproducibility.
-          - Orchestrated ingestion and transformation with an Apache Airflow DAG, loading results into BigQuery and modeling them with dbt.
-          - Processed large-scale trip data with Apache Spark and implemented real-time streaming with Apache Kafka and Apache Flink.
-
-    Awards:
-      - name: Viettel Digital Talent Program, Data Engineer (DS/AI Track)
-        date: 2025
-        summary: Selected in the top 3.6% of 5,700+ applicants nationwide, advanced to the full-time phase, and offered full-time employment while still in the third year of university.
-
-      - name: Honorable Student of the Semester, FPT University
-        date: 2023 - 2024
-        summary: Awarded in Fall 2023, Spring 2024 and Summer 2024.
-
-    Skills:
-      - label: Programming
-        details: Python, Java, TypeScript, SQL
-      - label: Data engineering
-        details: Apache Spark, Hadoop, Kafka, Flink, Airflow, NiFi, Apache Hop, dbt, Databricks
-      - label: Databases and cloud
-        details: PostgreSQL, Oracle, MinIO, Google Cloud, Docker
-      - label: Backend and web
-        details: Spring Boot, NestJS, .NET, FastAPI, Flask, React
-      - label: Monitoring and reporting
-        details: ELK Stack, Fluentd, KrakenD, Power BI
-
-    Languages:
-      - language: Vietnamese
-        fluency: Native speaker
-      - language: English
-        fluency: IELTS 6.5
+          - Built ETL workflows on Databricks following the Medallion architecture, and a hybrid RAG system over internal policy documents.
+          - Selected in the top 3.6% of 5,700+ applicants nationwide and offered full-time employment on completion.
