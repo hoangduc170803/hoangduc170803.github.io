@@ -33,6 +33,16 @@ Welcome to drop me an email if you want to discuss or collaborate.
 <!-- Selected projects. Mirrors the "selected publications" block of the theme,
      but driven by the _projects collection instead of a bibliography. -->
 <style>
+  /* Hold the profile photo to the reference site's near-square 8:9 frame, whatever
+     the source file's proportions are. object-fit crops rather than squashes, so a
+     tall portrait is trimmed top and bottom instead of being distorted. */
+  .profile img {
+    width: 100%;
+    aspect-ratio: 8 / 9;
+    object-fit: cover;
+    object-position: center top;
+  }
+
   /* The profile photo is floated right. Without clearing it, a short bio lets this
      block ride up beside the photo and sit in the narrow column left over. */
   .selected-projects-wrap { clear: both; padding-top: 2rem; }
