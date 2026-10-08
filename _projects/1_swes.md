@@ -4,6 +4,11 @@ title: SWES
 description: Multi-agent path finding for a live AGV fleet, inside the openTCS kernel
 importance: 1
 category: work
+permalink: /projects/swes/
+tag: "Aubot"
+period: "2026"
+headline: "SWES - Smart Warehouse Execution System (Multi-AGV Orchestration)"
+stack: "openTCS - PIBT / LaCAM / LaCAM* - Action Dependency Graph - Hungarian algorithm"
 ---
 
 **SWES — Smart Warehouse Execution System (Multi-AGV Orchestration)**

@@ -29,4 +29,44 @@ I rebuilt the pipelines behind a company-wide fee settlement system at [Viettel 
 
 Building a hybrid retrieval system over internal policy documents was where the two halves of my work met: the model was only as good as the pipeline feeding it. I want to keep working at that intersection: the data infrastructure that makes large models work, from the pipelines that train them to the systems that serve them.
 
-My [projects](/projects/) page has more on each of these, and my [CV](/cv/) has the full record. Email is the quickest way to reach me.
+Welcome to drop me an email if you want to discuss or collaborate.
+
+<!-- Selected projects. Mirrors the "selected publications" block of the theme,
+     but driven by the _projects collection instead of a bibliography. -->
+<style>
+  .selected-projects .proj { margin-bottom: 1.1rem; }
+  .selected-projects .tag {
+    display: inline-block; border: 1px solid var(--global-theme-color);
+    color: var(--global-theme-color); border-radius: 4px;
+    font-size: 0.72rem; line-height: 1.5; padding: 0 0.45rem; white-space: nowrap;
+  }
+  .selected-projects .when { display: block; font-size: 0.78rem; color: var(--global-text-color-light); margin-top: 0.25rem; }
+  .selected-projects .ptitle { font-weight: 500; }
+  .selected-projects .pmeta { font-size: 0.9rem; color: var(--global-text-color-light); }
+  .selected-projects .plinks a {
+    font-size: 0.78rem; border: 1px solid var(--global-divider-color);
+    border-radius: 3px; padding: 0 0.4rem; margin-right: 0.3rem;
+  }
+</style>
+
+<h2><a href="{{ '/projects/' | relative_url }}" style="color: inherit;">selected projects</a>
+  <a href="{{ '/projects/' | relative_url }}" style="font-size: 0.85rem; font-weight: 400;">[full list]</a>
+</h2>
+
+<div class="selected-projects">
+  {% assign ordered = site.projects | sort: "importance" %}
+  {% for p in ordered limit: 3 %}
+  <div class="proj row">
+    <div class="col-sm-2 abbr">
+      <span class="tag">{{ p.tag | default: "project" }}</span>
+      <span class="when">{{ p.period }}</span>
+    </div>
+    <div class="col-sm-10">
+      <div class="ptitle">{{ p.headline | default: p.title }}</div>
+      <div class="pmeta">{{ p.description }}</div>
+      <div class="pmeta">{{ p.stack }}</div>
+      <div class="plinks"><a href="{{ p.url | relative_url }}">Details</a></div>
+    </div>
+  </div>
+  {% endfor %}
+</div>

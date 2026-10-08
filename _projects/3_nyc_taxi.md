@@ -4,6 +4,11 @@ title: NYC Taxi Pipeline
 description: An end-to-end batch and streaming pipeline on Google Cloud
 importance: 3
 category: work
+permalink: /projects/nyc-taxi/
+tag: "Personal"
+period: ""
+headline: "NYC Taxi Data Pipeline"
+stack: "Terraform - Airflow - BigQuery - dbt - Spark - Kafka - Flink"
 ---
 
 **NYC Taxi Data Pipeline**

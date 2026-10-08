@@ -4,6 +4,11 @@ title: Hybrid RAG
 description: Answering policy questions from internal documents, with traceable citations
 importance: 2
 category: work
+permalink: /projects/hybrid-rag/
+tag: "Viettel DT"
+period: "2025"
+headline: "Hybrid RAG over internal policy documents"
+stack: "Milvus - BGE-M3 - BM25 - Gemma 3 - FastAPI - Docker"
 ---
 
 **Hybrid RAG System**
