@@ -1,189 +1,105 @@
 cv:
-  name: Albert Einstein
-  label: Scientist
-  email: einstein@example.com
-  location: Princeton, NJ
+  name: Nham Hoang Duc
+  label: Data Engineer
+  email: hoangduc170803@gmail.com
+  location: Hanoi, Vietnam
   image: ""
-  summary: A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time
+  summary: >-
+    Data engineer at Viettel Telecom, where I rebuilt the pipelines behind a company-wide fee settlement
+    system. At Aubot, I took a multi-agent path finding planner from recent literature into production on a
+    live AGV fleet. I want to keep working at that intersection: the data infrastructure that makes large
+    models work, from the pipelines that train them to the systems that serve them.
 
   social_networks:
-    - network: X
-      username: AlbertEinstein
     - network: GitHub
-      username: example
+      username: hoangduc170803
     - network: LinkedIn
-      username: example
-
-  address:
-    street: 2712 Broadway St
-    city: San Francisco
-    region: California
-    postalCode: CA 94115
-    countryCode: US
+      username: hoàng-đức-nhâm-a38115235
 
   sections:
     Education:
-      - institution: University of Zurich
-        location: Zurich, Switzerland
-        url: https://www.uzh.ch/
-        area: Physics
-        studyType: PhD
-        start_date: 1900
-        end_date: 1905
-        score: ""
-        courses: "Theory of Relativity"
+      - institution: FPT University
+        location: Hanoi, Vietnam
+        url: https://hanoi.fpt.edu.vn/
+        area: Information Technology (Software Engineering)
+        studyType: BSc
+        start_date: 2022
+        end_date: 2026-08
+        score: GPA 8.08/10
+        courses: "Statistics and Probability; Discrete Mathematics; Data Structures and Algorithms; Introduction to Databases; Operating Systems; Computer Organization and Architecture; Computer Networking; Internet of Things"
         highlights:
-          - Description 1.
-          - Description 2.
-
-      - institution: Eidgenössische Technische Hochschule
-        location: Zurich, Switzerland
-        area: Physics
-        studyType: Federal teaching diploma
-        start_date: 1896
-        end_date: 1900
-        highlights:
-          - Description 1.
-          - Description 2.
+          - "Graduation capstone project: SWES - Smart Warehouse Execution System (Multi-AGV Orchestration), graded 9.0/10 (A+)."
 
     Experience:
-      - company: Institute for Advanced Study, Princeton University
-        position: Professor of Theoretical Physics
-        location: Princeton University, NJ
-        start_date: 1933
-        end_date: 1955
-        summary: Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.
+      - company: Viettel Telecom
+        location: Hanoi, Vietnam
+        position: Data Engineer
+        start_date: 2025-07
+        end_date: present
         highlights:
-          - Relativity
-          - Description 2.
+          - Sales Fee System v3 could only settle fees monthly: data left the Data Lake as TXT files and was enriched and aggregated inside Oracle.
+          - Rebuilt the pipeline on the Data Lakehouse, with Apache Spark handling aggregation, enrichment and fee calculation across terabytes of data. Pipeline runtime fell from over 30 minutes to under 8 minutes, and settlement moved from monthly to daily.
+          - Migrated 17 tables from v3 with Apache Hop and consolidated external sources through Apache NiFi, with data integrity preserved across the cutover.
+          - Deployed a phone number masking system in partnership with China-ASEAN Information Harbor Co., Ltd., configuring the KrakenD API Gateway and streaming logs into the ELK stack through Fluentd.
 
-      - company: California Institute of Technology
-        position: Visiting Professor
-        location: Pasadena, California, US
-        start_date: 1933
-        end_date: 1933
+      - company: Viettel Group
+        location: Hanoi, Vietnam
+        position: Data Engineering Intern, Viettel Digital Talent Program (DS/AI Track)
+        start_date: 2025-04
+        end_date: 2025-06
         highlights:
-          - Description 1.
-          - Description 2.
-
-      - company: Kaiser Wilhelm Institute for Physics
-        position: Director
-        location: Berlin, Germany
-        start_date: 1917
-        end_date: 1933
-
-      - company: Karl-Ferdinand University
-        position: Professor of Theoretical Physics
-        location: Prague, Czechoslovakia
-        start_date: 1911
-        end_date: 1917
-
-      - company: University of Zurich
-        position: Associate Professor of Theoretical Physics
-        location: Zurich, Switzerland
-        start_date: 1909
-        end_date: 1911
-
-    Volunteer:
-      - company: People's Climate March
-        position: Lead Organizer
-        location: Zurich, Switzerland
-        start_date: 2014-04-01
-        end_date: 2015-07-01
-        summary: Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.
-        highlights:
-          - "Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march."
-          - "Men of the year 2014 by Time magazine"
-
-    Awards:
-      - title: Nobel Prize in Physics
-        authors:
-          - "Royal Swedish Academy of Sciences"
-        date: 1921-11-01
-        awarder: Royal Swedish Academy of Sciences
-        url: https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/
-        summary: The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'
-
-      - title: Max Planck Medal
-        authors:
-          - "German Physical Society"
-        date: 2029
-        awarder: German Physical Society
-        summary: Awarded for outstanding scientific achievement
-
-    Publications:
-      - title: Zur Elektrodynamik bewegter Körper
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-06-30
-        url: https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies
-        summary: It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source.
-
-      - title: Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-03-18
-        url: https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt
-        summary: In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921.
-
-      - title: Die Grundlage der allgemeinen Relativitätstheorie
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1916-03-20
-        url: https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie
-        summary: The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914).
-
-    Skills:
-      - name: Physics
-        level: Master
-        icon: fa-solid fa-hashtag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
-
-    Languages:
-      - name: German
-        summary: "Native speaker"
-
-      - name: English
-        summary: "Fluent"
-
-    Interests:
-      - name: Physics
-        icon: fa-solid fa-tag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
-
-    Certificates:
-      - name: Machine Learning
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-location-dot
-
-      - name: Quantum Computing
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-tag
-
-      - name: Quantum Information
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-envelope
+          - Built ETL workflows following the Medallion architecture (Bronze/Silver/Gold) on Databricks, using Spark SQL to transform data across each layer.
+          - Applied fine-grained access control with Apache Ranger, Databricks Unity Catalog and lakeFS.
+          - Developed a hybrid RAG system that answers staff questions on which company-issued policy applies, returning the governing policy document with traceable citations.
 
     Projects:
-      - name: Quantum Computing
-        summary: Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.
+      - name: SWES - Smart Warehouse Execution System (Multi-AGV Orchestration)
+        date: 2026-06 to 2026-08
         highlights:
-          - Quantum Teleportation
-          - Quantum Cryptography
-        start_date: 2018-01-01
-        end_date: 2018-01-01
+          - Research and Development, Multi-Agent Path Finding at Aubot (CF Group). Graduation capstone project.
+          - openTCS ships with a Dijkstra router that plans each vehicle independently, which left the AGVs deadlocking against one another in regular operation.
+          - Built a joint multi-agent planner in the openTCS Java kernel, evolving from PIBT to LaCAM and LaCAM*, extended to continuous order arrival with LLLG local guidance (SoCS-26) and an Action Dependency Graph against corridor deadlock.
+          - Ported these undirected-graph algorithms onto a directed industrial roadmap with vehicle footprints and headings, and replaced greedy assignment with global min-cost matching (Hungarian algorithm) on road-graph distances.
+          - Deployed on Aubot's live AGV fleet.
 
-    References:
-      - name: Professor John Doe
-        icon: fa-solid fa-laptop
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
+      - name: Hybrid RAG System
+        date: 2025-04 to 2025-06
+        highlights:
+          - Built at the Viettel Digital Talent Program with Python, FastAPI, Streamlit, Milvus, MinIO, Docker, BGE-M3 and Gemma 3.
+          - Answers staff questions on which company-issued policy applies, returning the governing policy document with traceable citations.
+          - Indexed documents with BGE-M3 embeddings (1024-dim) in Milvus and combined dense vector search with BM25 sparse search, improving recall and ranking quality.
+          - Integrated Gemma 3 models as the generative backbone and benchmarked performance across model sizes.
 
-      - name: Professor Jane Smith
-        icon: fa-solid fa-thumbtack
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
+      - name: NYC Taxi Data Pipeline
+        date: ""
+        highlights:
+          - Built an automated pipeline for NYC taxi trip data on Google Cloud, provisioning all resources with Terraform for reproducibility.
+          - Orchestrated ingestion and transformation with an Apache Airflow DAG, loading results into BigQuery and modeling them with dbt.
+          - Processed large-scale trip data with Apache Spark and implemented real-time streaming with Apache Kafka and Apache Flink.
+
+    Awards:
+      - name: Viettel Digital Talent Program, Data Engineer (DS/AI Track)
+        date: 2025
+        summary: Selected in the top 3.6% of 5,700+ applicants nationwide, advanced to the full-time phase, and offered full-time employment while still in the third year of university.
+
+      - name: Honorable Student of the Semester, FPT University
+        date: 2023 - 2024
+        summary: Awarded in Fall 2023, Spring 2024 and Summer 2024.
+
+    Skills:
+      - label: Programming
+        details: Python, Java, TypeScript, SQL
+      - label: Data engineering
+        details: Apache Spark, Hadoop, Kafka, Flink, Airflow, NiFi, Apache Hop, dbt, Databricks
+      - label: Databases and cloud
+        details: PostgreSQL, Oracle, MinIO, Google Cloud, Docker
+      - label: Backend and web
+        details: Spring Boot, NestJS, .NET, FastAPI, Flask, React
+      - label: Monitoring and reporting
+        details: ELK Stack, Fluentd, KrakenD, Power BI
+
+    Languages:
+      - language: Vietnamese
+        fluency: Native speaker
+      - language: English
+        fluency: IELTS 6.5
