@@ -8,8 +8,7 @@ profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>Hanoi, Vietnam</p>
+  more_info: # the reference site keeps this empty; add lines here to show text under the photo
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -34,23 +33,40 @@ Welcome to drop me an email if you want to discuss or collaborate.
 <!-- Selected projects. Mirrors the "selected publications" block of the theme,
      but driven by the _projects collection instead of a bibliography. -->
 <style>
-  .selected-projects .proj { margin-bottom: 1.1rem; }
+  /* The profile photo is floated right. Without clearing it, a short bio lets this
+     block ride up beside the photo and sit in the narrow column left over. */
+  .selected-projects-wrap { clear: both; padding-top: 2rem; }
+
+  /* Heading: large, with "[full list]" nearly the same size, as in the
+     theme's own "selected publications" block. */
+  .selected-projects-wrap h2 { font-size: 2rem; font-weight: 400; margin-bottom: 1.6rem; }
+  .selected-projects-wrap h2 .full-list { font-size: 1.7rem; font-weight: 400; color: var(--global-theme-color); }
+
+  .selected-projects .proj { margin-bottom: 2rem; }
+
+  /* Solid badge, matching the venue badges on publication entries. */
   .selected-projects .tag {
-    display: inline-block; border: 1px solid var(--global-theme-color);
-    color: var(--global-theme-color); border-radius: 4px;
-    font-size: 0.72rem; line-height: 1.5; padding: 0 0.45rem; white-space: nowrap;
+    display: inline-block; background-color: var(--global-theme-color); color: #fff;
+    border-radius: 4px; font-size: 0.75rem; font-weight: 500;
+    line-height: 1.6; padding: 0.1rem 0.5rem; white-space: nowrap;
   }
-  .selected-projects .when { display: block; font-size: 0.78rem; color: var(--global-text-color-light); margin-top: 0.25rem; }
-  .selected-projects .ptitle { font-weight: 500; }
-  .selected-projects .pmeta { font-size: 0.9rem; color: var(--global-text-color-light); }
+  .selected-projects .when { display: block; font-size: 0.85rem; color: var(--global-text-color-light); margin-top: 0.4rem; }
+
+  .selected-projects .ptitle { font-size: 1.05rem; line-height: 1.4; margin-bottom: 0.15rem; }
+  .selected-projects .pmeta { font-size: 0.95rem; color: var(--global-text-color-light); line-height: 1.5; }
+  .selected-projects .plinks { margin-top: 0.5rem; }
   .selected-projects .plinks a {
-    font-size: 0.78rem; border: 1px solid var(--global-divider-color);
-    border-radius: 3px; padding: 0 0.4rem; margin-right: 0.3rem;
+    display: inline-block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.02em;
+    border: 1px solid var(--global-divider-color); border-radius: 3px;
+    padding: 0.15rem 0.6rem; margin-right: 0.35rem; color: var(--global-text-color);
   }
+  .selected-projects .plinks a:hover { border-color: var(--global-theme-color); color: var(--global-theme-color); }
 </style>
 
+<div class="selected-projects-wrap">
+
 <h2><a href="{{ '/projects/' | relative_url }}" style="color: inherit;">selected projects</a>
-  <a href="{{ '/projects/' | relative_url }}" style="font-size: 0.85rem; font-weight: 400;">[full list]</a>
+  <a href="{{ '/projects/' | relative_url }}" class="full-list">[full list]</a>
 </h2>
 
 <div class="selected-projects">
@@ -69,4 +85,6 @@ Welcome to drop me an email if you want to discuss or collaborate.
     </div>
   </div>
   {% endfor %}
+</div>
+
 </div>
