@@ -9,6 +9,13 @@ tag: "Aubot"
 period: "2026"
 headline: "SWES - Smart Warehouse Execution System (Multi-AGV Orchestration)"
 stack: "openTCS - PIBT / LaCAM / LaCAM* - Action Dependency Graph - Hungarian algorithm"
+links:
+  - name: Kernel
+    url: https://github.com/hoangduc170803/kernel
+  - name: Frontend
+    url: https://github.com/hoangduc170803/frontend
+  - name: Backend
+    url: https://github.com/hoangduc170803/backend
 demo: /assets/video/swes_demo.mp4
 demo_poster: /assets/img/swes_demo_poster.jpg
 demo_caption: "The full run, roughly 48x real time. Orders drain from the upper block while completed stock accumulates in the lower one, and vehicles run the corridor between the racking and the station at the far left."
@@ -17,6 +24,10 @@ demo_caption: "The full run, roughly 48x real time. Orders drain from the upper 
 **SWES — Smart Warehouse Execution System (Multi-AGV Orchestration)**
 Research and Development, Multi-Agent Path Finding · Aubot (CF Group) · June – August 2026
 Graduation capstone project, graded 9.0/10 (A+).
+
+Source: [kernel](https://github.com/hoangduc170803/kernel) (the openTCS planner) ·
+[frontend](https://github.com/hoangduc170803/frontend) ·
+[backend](https://github.com/hoangduc170803/backend)
 
 ### The problem
 
