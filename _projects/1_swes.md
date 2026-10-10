@@ -18,13 +18,13 @@ summary: >-
 links:
   - name: Kernel
     url: https://github.com/hoangduc170803/kernel
-    desc: "The openTCS Java kernel, where the joint planner lives: PIBT, LaCAM and LaCAM*, the Action Dependency Graph and Hungarian assignment."
+    desc: "The openTCS Java kernel, where the planner lives: the PIBT engine, the LaCAM solver, LLLG local guidance and the Action Dependency Graph, over a directed roadmap with vehicle footprints."
   - name: Frontend
     url: https://github.com/hoangduc170803/frontend
     desc: "Operator console in React and TypeScript: plant map, AGV and cargo state, zones and dashboards."
   - name: Backend
     url: https://github.com/hoangduc170803/backend
-    desc: "NestJS service between the console and the kernel: AGV, cargo, map and zone APIs, MQTT messaging, Postgres with migrations."
+    desc: "NestJS service between the console and the kernel: the Hungarian assignment engine and dispatch policy, AGV, cargo, map and zone APIs, MQTT messaging, Postgres with migrations."
 demo: /assets/video/swes_demo.mp4
 demo_poster: /assets/img/swes_demo_poster.jpg
 demo_caption: "The full run, roughly 48x real time. Orders drain from the upper block while completed stock accumulates in the lower one, and vehicles run the corridor between the racking and the station at the far left."
@@ -36,12 +36,14 @@ Graduation capstone project, graded 9.0/10 (A+).
 
 **Source**
 
-- [kernel](https://github.com/hoangduc170803/kernel) - the openTCS Java kernel, where the joint
-  planner lives: PIBT, LaCAM and LaCAM*, the Action Dependency Graph and Hungarian assignment.
+- [kernel](https://github.com/hoangduc170803/kernel) - the openTCS Java kernel, where the planner
+  lives: the PIBT engine, the LaCAM solver, LLLG local guidance and the Action Dependency Graph,
+  over a directed roadmap with vehicle footprints.
 - [frontend](https://github.com/hoangduc170803/frontend) - operator console in React and
   TypeScript: plant map, AGV and cargo state, zones and dashboards.
 - [backend](https://github.com/hoangduc170803/backend) - NestJS service between the console and the
-  kernel: AGV, cargo, map and zone APIs, MQTT messaging, Postgres with migrations.
+  kernel: the Hungarian assignment engine and dispatch policy, AGV, cargo, map and zone APIs,
+  MQTT messaging, Postgres with migrations.
 
 ### The problem
 
