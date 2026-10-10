@@ -21,6 +21,30 @@ openTCS, the industrial control kernel the fleet runs on, ships with a Dijkstra 
 vehicle independently. Single-agent shortest paths say nothing about what the other vehicles are doing, so
 in regular operation the AGVs deadlocked against one another in the aisles.
 
+<div class="swes-demo">
+  <video autoplay loop muted playsinline
+         poster="{{ '/assets/img/swes_demo_poster.jpg' | relative_url }}">
+    <source src="{{ '/assets/video/swes_demo.mp4' | relative_url }}" type="video/mp4">
+  </video>
+  <p class="caption">
+    The full run, roughly 48x real time. Orders drain from the upper block while completed
+    stock accumulates in the lower one, and vehicles run the corridor between the racking and
+    the station at the far left. Each vehicle draws the route the planner assigned it.
+  </p>
+</div>
+
+<style>
+  .swes-demo { margin: 1.5rem 0 2rem; text-align: center; }
+  .swes-demo video {
+    max-width: 100%; width: 100%; height: auto;
+    border: 1px solid var(--global-divider-color); border-radius: 4px;
+  }
+  .swes-demo .caption {
+    font-size: 0.85rem; color: var(--global-text-color-light);
+    margin: 0.6rem auto 0; max-width: 34rem; line-height: 1.5;
+  }
+</style>
+
 ### What I built
 
 A joint multi-agent planner inside the openTCS Java kernel, developed through a progression of published
