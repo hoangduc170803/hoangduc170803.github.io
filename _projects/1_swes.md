@@ -9,13 +9,22 @@ tag: "Aubot"
 period: "2026"
 headline: "SWES - Smart Warehouse Execution System (Multi-AGV Orchestration)"
 stack: "openTCS - PIBT / LaCAM / LaCAM* - Action Dependency Graph - Hungarian algorithm"
+summary: >-
+  openTCS ships with a Dijkstra router that plans each vehicle independently, which left the AGVs
+  deadlocking against one another in regular operation. I built a joint multi-agent planner in its
+  Java kernel, evolving from PIBT to LaCAM and LaCAM*, then ported those undirected-graph algorithms
+  onto a directed industrial roadmap with vehicle footprints and headings and replaced greedy
+  assignment with global min-cost matching. Deployed on Aubot's live AGV fleet.
 links:
   - name: Kernel
     url: https://github.com/hoangduc170803/kernel
+    desc: "The openTCS Java kernel, where the joint planner lives: PIBT, LaCAM and LaCAM*, the Action Dependency Graph and Hungarian assignment."
   - name: Frontend
     url: https://github.com/hoangduc170803/frontend
+    desc: "Operator console in React and TypeScript: plant map, AGV and cargo state, zones and dashboards."
   - name: Backend
     url: https://github.com/hoangduc170803/backend
+    desc: "NestJS service between the console and the kernel: AGV, cargo, map and zone APIs, MQTT messaging, Postgres with migrations."
 demo: /assets/video/swes_demo.mp4
 demo_poster: /assets/img/swes_demo_poster.jpg
 demo_caption: "The full run, roughly 48x real time. Orders drain from the upper block while completed stock accumulates in the lower one, and vehicles run the corridor between the racking and the station at the far left."
@@ -25,9 +34,14 @@ demo_caption: "The full run, roughly 48x real time. Orders drain from the upper 
 Research and Development, Multi-Agent Path Finding · Aubot (CF Group) · June – August 2026
 Graduation capstone project, graded 9.0/10 (A+).
 
-Source: [kernel](https://github.com/hoangduc170803/kernel) (the openTCS planner) ·
-[frontend](https://github.com/hoangduc170803/frontend) ·
-[backend](https://github.com/hoangduc170803/backend)
+**Source**
+
+- [kernel](https://github.com/hoangduc170803/kernel) - the openTCS Java kernel, where the joint
+  planner lives: PIBT, LaCAM and LaCAM*, the Action Dependency Graph and Hungarian assignment.
+- [frontend](https://github.com/hoangduc170803/frontend) - operator console in React and
+  TypeScript: plant map, AGV and cargo state, zones and dashboards.
+- [backend](https://github.com/hoangduc170803/backend) - NestJS service between the console and the
+  kernel: AGV, cargo, map and zone APIs, MQTT messaging, Postgres with migrations.
 
 ### The problem
 

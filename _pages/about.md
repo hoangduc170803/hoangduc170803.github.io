@@ -65,13 +65,11 @@ Welcome to drop me an email if you want to discuss or collaborate.
   .selected-projects .ptitle a { color: inherit; }
   .selected-projects .ptitle a:hover { color: var(--global-theme-color); }
 
-  .selected-projects .plinks { margin-top: 0.55rem; }
-  .selected-projects .plinks a {
-    display: inline-block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.02em;
-    border: 1px solid var(--global-divider-color); border-radius: 3px;
-    padding: 0.15rem 0.6rem; margin: 0 0.35rem 0.35rem 0; color: var(--global-text-color);
-  }
-  .selected-projects .plinks a:hover { border-color: var(--global-theme-color); color: var(--global-theme-color); }
+  .selected-projects .plinks { margin-top: 0.7rem; }
+  .selected-projects .plink { font-size: 0.85rem; line-height: 1.55; margin-bottom: 0.3rem; }
+  .selected-projects .plink a { font-weight: 600; color: var(--global-theme-color); }
+  .selected-projects .plink a:hover { text-decoration: underline; }
+  .selected-projects .pldesc { color: var(--global-text-color-light); }
 
   .selected-projects .demo { margin-top: 0.9rem; }
   .selected-projects .demo video {
@@ -98,11 +96,15 @@ Welcome to drop me an email if you want to discuss or collaborate.
     </div>
     <div class="col-sm-10">
       <div class="ptitle"><a href="{{ p.url | relative_url }}">{{ p.headline | default: p.title }}</a></div>
-      <div class="pmeta">{{ p.description }}</div>
+      <div class="pmeta">{{ p.summary | default: p.description }}</div>
       <div class="pmeta">{{ p.stack }}</div>
       {% if p.links %}
       <div class="plinks">
-        {% for l in p.links %}<a href="{{ l.url }}" target="_blank" rel="noopener">{{ l.name }}</a>{% endfor %}
+        {% for l in p.links %}
+        <div class="plink">
+          <a href="{{ l.url }}" target="_blank" rel="noopener">{{ l.name }}</a>{% if l.desc %}<span class="pldesc"> - {{ l.desc }}</span>{% endif %}
+        </div>
+        {% endfor %}
       </div>
       {% endif %}
       {% if p.demo %}
