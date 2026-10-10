@@ -62,13 +62,15 @@ Welcome to drop me an email if you want to discuss or collaborate.
 
   .selected-projects .ptitle { font-size: 1.05rem; line-height: 1.4; margin-bottom: 0.15rem; }
   .selected-projects .pmeta { font-size: 0.95rem; color: var(--global-text-color-light); line-height: 1.5; }
-  .selected-projects .plinks { margin-top: 0.5rem; }
-  .selected-projects .plinks a {
-    display: inline-block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.02em;
-    border: 1px solid var(--global-divider-color); border-radius: 3px;
-    padding: 0.15rem 0.6rem; margin-right: 0.35rem; color: var(--global-text-color);
+  .selected-projects .demo { margin-top: 0.9rem; }
+  .selected-projects .demo video {
+    display: block; width: 100%; height: auto;
+    border: 1px solid var(--global-divider-color); border-radius: 4px;
   }
-  .selected-projects .plinks a:hover { border-color: var(--global-theme-color); color: var(--global-theme-color); }
+  .selected-projects .vcaption {
+    font-size: 0.8rem; color: var(--global-text-color-light);
+    margin: 0.5rem 0 0; line-height: 1.5;
+  }
 </style>
 
 <div class="selected-projects-wrap">
@@ -77,7 +79,7 @@ Welcome to drop me an email if you want to discuss or collaborate.
 
 <div class="selected-projects">
   {% assign ordered = site.projects | sort: "importance" %}
-  {% for p in ordered limit: 3 %}
+  {% for p in ordered limit: 1 %}
   <div class="proj row">
     <div class="col-sm-2 abbr">
       <span class="tag">{{ p.tag | default: "project" }}</span>
@@ -87,7 +89,14 @@ Welcome to drop me an email if you want to discuss or collaborate.
       <div class="ptitle">{{ p.headline | default: p.title }}</div>
       <div class="pmeta">{{ p.description }}</div>
       <div class="pmeta">{{ p.stack }}</div>
-      <div class="plinks"><a href="{{ p.url | relative_url }}">Details</a></div>
+      {% if p.demo %}
+      <div class="demo">
+        <video autoplay loop muted playsinline poster="{{ p.demo_poster | relative_url }}">
+          <source src="{{ p.demo | relative_url }}" type="video/mp4">
+        </video>
+        {% if p.demo_caption %}<p class="vcaption">{{ p.demo_caption }}</p>{% endif %}
+      </div>
+      {% endif %}
     </div>
   </div>
   {% endfor %}

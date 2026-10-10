@@ -9,6 +9,9 @@ tag: "Aubot"
 period: "2026"
 headline: "SWES - Smart Warehouse Execution System (Multi-AGV Orchestration)"
 stack: "openTCS - PIBT / LaCAM / LaCAM* - Action Dependency Graph - Hungarian algorithm"
+demo: /assets/video/swes_demo.mp4
+demo_poster: /assets/img/swes_demo_poster.jpg
+demo_caption: "The full run, roughly 48x real time. Orders drain from the upper block while completed stock accumulates in the lower one, and vehicles run the corridor between the racking and the station at the far left."
 ---
 
 **SWES — Smart Warehouse Execution System (Multi-AGV Orchestration)**
